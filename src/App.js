@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import KeyPad from './components/KeyPad';
+import Keypad from './components/KeyPad';
 import CalculatorDisplay from './components/CalculatorDisplay';
-
 
 function App() {
   const [result, setResult] = useState("");
@@ -37,21 +35,12 @@ function App() {
   };
 
   return (
-    <>
-      <div style={{ width: "100%" }}>
-        <div style={{
-          width: "350px",
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)'
-        }}
-        >
-          <CalculatorDisplay />
-          <KeyPad />
-        </div>
-      </div>
-    </>
+    <div
+      className="fullPage"
+    >
+      <CalculatorDisplay result={result} />
+      <Keypad performCalculation={performCalculation} />
+    </div>
   );
 }
 

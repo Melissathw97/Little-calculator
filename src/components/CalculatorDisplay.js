@@ -1,15 +1,28 @@
-import React from "react";
+import React from 'react'
 
-const CalculatorDisplay = () => {
+const CalculatorDisplay = ({ result }) => {
   return (
-    <div style={{ border: "1px solid black" }}>
-      <div style={{ width: "80%" }}>
-        <h1 style={{ textAlign: "end" }}>
-          0
+    <div
+      style={{
+        width: "370px",
+        backgroundColor: "lightgray",
+        borderTopLeftRadius: "30px",
+        borderTopRightRadius: "30px",
+        boxShadow: "8px 1px gray, 10px 3px gray, 12px 3px gray, 15px 5px gray, 20px 10px gray",
+      }}
+    >
+      <div style={{ padding: "5px 50px" }}>
+        <h1
+          style={{
+            textAlign: "right",
+            fontSize: "2.5em"
+          }}
+        >
+          {result == "" ? "0" : result}
         </h1>
       </div>
     </div>
   )
 }
 
-export default CalculatorDisplay;
+export default CalculatorDisplay

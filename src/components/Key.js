@@ -1,28 +1,32 @@
-import React from "react";
+import React from 'react'
+import '../App.css'
 
-const Key = ({ data }) => {
+const Key = ({ data, performCalculation }) => {
   return (
-    <>
-      <div style={{
-        width: `calc((100%/12) * ${data.width})`,
-        backgroundColor: data.color,
-        border: "1px solid black",
-        boxSizing: "border-box",
-        cursor: "pointer",
-        padding: "0"
-      }}
-      >
-        <button style={{
-          border: "none",
-          backgroundColor: "transparent",
-          width: "100%"
+    <div
+      className="key"
+    >
+      <button
+        className="button"
+        style={{
+          backgroundColor: data.color,
         }}
+        onClick={() => performCalculation(data.value)}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            color: "white",
+            fontSize: "2em",
+            fontWeight: "bold"
+          }}
         >
-          <h2 style={{ textAlign: "center", color: "white" }}>{data.value}</h2>
-        </button>
-      </div>
-    </>
-  );
-};
+          {data.value}
+        </h2>
+      </button>
 
-export default Key;
+    </div>
+  )
+}
+
+export default Key
