@@ -15,7 +15,7 @@ const CalculatorDisplay = ({ result }) => {
         <h1
           style={{
             textAlign: "right",
-            fontSize: "2.5em"
+            fontSize: "2.3em"
           }}
         >
           {result == "" ? "0" : result}
