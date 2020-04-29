@@ -17,8 +17,7 @@ const Key = ({ data, performCalculation }) => {
           style={{
             textAlign: "center",
             color: "white",
-            fontSize: "2em",
-            fontWeight: "bold"
+            fontSize: "1.8em",
           }}
         >
           {data.value}
